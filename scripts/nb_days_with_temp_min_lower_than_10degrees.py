@@ -48,6 +48,7 @@ def compute(source_file: str, weather_station_name: str, output_dir: str):
     ax.set_title(f"Number of days with minimum temperature < 10°C in {weather_station_name}")
     ax.set_xlabel("Year")
     ax.set_ylabel("Number of days")
+    ax.set_ylim(0, 200)
 
     ax.grid(axis="y", alpha=0.3)
 
