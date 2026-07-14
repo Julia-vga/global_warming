@@ -75,7 +75,6 @@ def compute(source_file: str, weather_station_name: str, output_dir: str):
         ax.set_title(f"Annual average temperature in {weather_station_name}")
         ax.set_xlabel("Year")
         ax.set_ylabel("Average temperature (°C)")
-        ax.set_ylim(10, 25)
 
         ax.grid(True, alpha=0.3)
 
