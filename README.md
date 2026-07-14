@@ -23,7 +23,7 @@ Examples include:
 - Number of days where **TX > 30°C**
 - Number of days where **TN < 10°C**
 
-The repository already contains a set of generated charts in the [output](https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes). directory.
+The repository already contains a set of generated charts in the [output](https://www.data.gouv.fr/datasets/donnees-climatologiques-de-base-quotidiennes) directory.
 
 These charts were produced using publicly available Météo-France datasets and illustrate examples of the analyses performed by this project for several French weather stations.
 
