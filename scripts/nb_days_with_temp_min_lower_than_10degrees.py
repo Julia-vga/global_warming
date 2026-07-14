@@ -56,4 +56,4 @@ def compute(source_file: str, weather_station_name: str, output_dir: str):
     ax.tick_params(axis="x", rotation=45)
 
     fig.tight_layout()
-    fig.savefig(f"{output_dir}/temperatures_nice_nb_days_lower_than_10_degrees.png", dpi=300)
+    fig.savefig(f"{output_dir}/temperatures_{weather_station_name}_nb_days_lower_than_10_degrees.png", dpi=300)

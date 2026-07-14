@@ -83,4 +83,4 @@ def compute(source_file: str, weather_station_name: str, output_dir: str):
         cbar.set_label("Year")
 
         fig.tight_layout()
-        fig.savefig(f"{output_dir}/temperatures_nice_average_per_year.png", dpi=300)
+        fig.savefig(f"{output_dir}/temperatures_{weather_station_name}_average_per_year.png", dpi=300)
