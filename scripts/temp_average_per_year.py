@@ -72,15 +72,15 @@ def compute(source_file: str, weather_station_name: str, output_dir: str):
         ax.set_xlim(annees.min(), annees.max())
         ax.set_ylim(moyennes.min() - 0.5, moyennes.max() + 0.5)
 
-        ax.set_title("Température moyenne annuelle à Nice (1950-2024)")
-        ax.set_xlabel("Année")
-        ax.set_ylabel("Température moyenne (°C)")
+        ax.set_title(f"Annual average temperature in {weather_station_name}")
+        ax.set_xlabel("Year")
+        ax.set_ylabel("Average temperature (°C)")
 
         ax.grid(True, alpha=0.3)
 
         # Barre de couleur
         cbar = fig.colorbar(lc, ax=ax)
-        cbar.set_label("Année")
+        cbar.set_label("Year")
 
         fig.tight_layout()
-        fig.savefig("{}/temperatures_nice_min_max_per_year_1950_2024.png".format(output_dir), dpi=300)
+        fig.savefig(f"{output_dir}/temperatures_nice_average_per_year.png", dpi=300)

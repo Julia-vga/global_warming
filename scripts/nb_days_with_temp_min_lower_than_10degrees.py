@@ -31,7 +31,6 @@ def compute(source_file: str, weather_station_name: str, output_dir: str):
     annees = sorted(cold_days.keys())
     nb_days = [cold_days[a] for a in annees]
 
-    # Couleurs : vert jusqu'en 2003, rouge après
     couleurs = [
         "blue"
         for _ in annees
@@ -46,15 +45,15 @@ def compute(source_file: str, weather_station_name: str, output_dir: str):
         width=0.8
     )
 
-    ax.set_title("Nombre de jours avec temperature min < 10°C à Nice")
-    ax.set_xlabel("Année")
-    ax.set_ylabel("Nombre de jours")
+    ax.set_title(f"Number of days with minimum temperature < 10°C in {weather_station_name}")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Number of days")
 
     ax.grid(axis="y", alpha=0.3)
 
-    # Une graduation tous les 5 ans
+    # Display a tick every 5 years
     ax.set_xticks(annees[::5])
     ax.tick_params(axis="x", rotation=45)
 
     fig.tight_layout()
-    fig.savefig("{}/temperatures_nice_average_1950_2024.png".format(output_dir), dpi=300)
+    fig.savefig(f"{output_dir}/temperatures_nice_nb_days_lower_than_10_degrees.png", dpi=300)

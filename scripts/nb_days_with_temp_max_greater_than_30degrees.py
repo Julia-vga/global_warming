@@ -31,7 +31,6 @@ def compute(source_file: str, weather_station_name: str, output_dir: str):
     annees = sorted(jours_chauds.keys())
     nb_jours = [jours_chauds[a] for a in annees]
 
-    # Couleurs : vert jusqu'en 2003, rouge après
     couleurs = [
         "red"
         for _ in annees
@@ -46,15 +45,15 @@ def compute(source_file: str, weather_station_name: str, output_dir: str):
         width=0.8
     )
 
-    ax.set_title("Nombre de jours avec temperature max > 30°C à Nice")
-    ax.set_xlabel("Année")
-    ax.set_ylabel("Nombre de jours")
+    ax.set_title(f"Number of days with maximum temperature > 30°C in {weather_station_name}")
+    ax.set_xlabel("Year")
+    ax.set_ylabel("Number of days")
 
     ax.grid(axis="y", alpha=0.3)
 
-    # Une graduation tous les 5 ans
+    # Display a tick every 5 years
     ax.set_xticks(annees[::5])
     ax.tick_params(axis="x", rotation=45)
 
     fig.tight_layout()
-    fig.savefig("{}/temperatures_nice_nb_days_higher_than_30_degrees_1950_2024.png".format(output_dir), dpi=300)
+    fig.savefig(f"{output_dir}/temperatures_nice_nb_days_higher_than_30_degrees_1950_2024.png", dpi=300)
