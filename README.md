@@ -73,6 +73,14 @@ results/
 └── number_of_days_below_10C.png
 ```
 
+## Sample Results
+
+The repository already contains a set of generated charts in the `output/` directory.
+
+These charts were produced using publicly available Météo-France datasets and illustrate examples of the analyses performed by this project for several French weather stations.
+
+The `output/` directory is provided as a demonstration of the tool's capabilities. You can generate your own charts by running the program on any compatible Météo-France dataset.
+
 ## Supported analyses
 
 Current visualizations include:
